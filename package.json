@@ -7,7 +7,7 @@
 "dev": "tsx watch src/server.ts"
 },
 "keywords": ["blog", "api", "express", "typescript", "prisma", "node"],
-"author": "Milena Vieira",
+"author": "Helena Matoso",
 "license": "MIT",
 "type": "commonjs",
 "devDependencies": {
