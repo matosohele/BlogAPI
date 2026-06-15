@@ -4,7 +4,7 @@ import { createUser, verifyUser } from "../services/user.service"
 import { createToken } from "../services/auth.service"
 import { create } from "node:domain"
 
-export const singIn: RequestHandler = async (req, res) => {
+export const signIn: RequestHandler = async (req, res) => {
 const schema = z.object({
 email: z.string().email(),
 password: z.string()
@@ -29,7 +29,7 @@ token
 })
 }
 
-export const singUp: RequestHandler = async (req, res) => {
+export const signUp: RequestHandler = async (req, res) => {
 const schema = z.object({
 name: z.string(),
 email: z.string().email(),
@@ -54,4 +54,8 @@ email: newUser.email
 },
 token
 })
+}
+
+export const validate: RequestHandler = (req, res) => {
+    //logica paravalidar o token de autenticacao
 }
