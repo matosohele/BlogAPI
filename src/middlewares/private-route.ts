@@ -9,6 +9,7 @@ export const privateRoute = async (
 ) => {
 
   const user = await verifyRequest(req)
+  console.log(user)
 
   if (!user) {
     return res.status(401).json({ error: 'Unauthorized' })

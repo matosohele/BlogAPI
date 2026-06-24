@@ -16,6 +16,7 @@ export const verifyRequest = async (req: Request) => {
             const payload = verifyJWT(token)
             if (payload) {
                 const user_id = (payload as TokenPayload).id
+                console.log(user_id)
                 const user = await getUserById(Number(user_id))
                 if (user) return user
             }
